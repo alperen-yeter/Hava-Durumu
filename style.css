@@ -1,0 +1,279 @@
+html, body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #87CEEB;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3vh 2vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Kapsayıcı */
+.container {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  width: 95vw;
+  max-width: 1250px;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Başlık */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Arama kutusu */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Input alanı */
+.search-box input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 7px 0 0 7px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Arama butonu */
+#searchBtn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #0973b9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Hava durumu kartları */
+#weatherResults {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.weather-card {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideDown 0.5s ease forwards;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  color: #fff;
+  flex: 1 1 calc(20% - 15px);
+  min-width: 150px;
+  box-sizing: border-box;
+}
+
+.weather-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.weather-icon {
+  width: 60px;
+  margin: 0 auto 20px;
+}
+
+.temp {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f39c12;
+  line-height: 1.3;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Geçmiş Aramalar Kutusu */
+#historyBox {
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 2%;
+  box-shadow: 0 4px 10px rgba(25, 18, 58, 0.3);
+}
+
+#historyBox h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #f1f1f1;
+}
+
+#searchHistory {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#searchHistory li {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+#searchHistory li:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Geçmişi Temizle Butonu */
+#clearHistoryBtn {
+  border-radius: 6px;
+  padding: 2px 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  float: right;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#clearHistoryBtn:hover {
+  background-color: rgba(19, 1, 43, 0.6);
+  color: #fff;
+}
+
+/* Dil Seçici */
+.language-switcher {
+  text-align: right;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.language-switcher label {
+  margin-right: 8px;
+}
+
+.language-switcher select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Tema Renkleri */
+.clear-theme {
+  background-color: #87ceeb;
+  color: #000;
+}
+
+.clouds-theme {
+  background-color: #b0c4de;
+  color: #000;
+}
+
+.rain-theme {
+  background-color: #708090;
+  color: #fff;
+}
+
+.thunderstorm-theme {
+  background-color: #2f4f4f;
+  color: #fff;
+}
+
+.snow-theme {
+  background-color: #f0f8ff;
+  color: #000;
+}
+
+.default-theme {
+  background-color: #1e3d59;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .weather-card {
+    flex: none;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .search-box input,
+  .search-box button {
+    font-size: 1rem;
+  }
+
+  .weather-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .temp {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  #weatherResults {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-icon {
+    width: 50px;
+  }
+}

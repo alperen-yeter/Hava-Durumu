@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hava Durumu - 5 Günlük Tahmin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="container">
+
+    <div class="language-switcher">
+       <label for="languageSelector" id="languageLabel">🌐 Dil:</label>
+       <select id="languageSelector">
+    <option value="tr" selected>Türkçe</option>
+    <option value="en">English</option>
+  </select>
+</div> 
+
+    <h1 id="mainTitle">5 Günlük Hava Durumu Tahmini</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Şehir adı girin..." />
+      <button id="searchBtn">Ara</button>
+    </div>
+   
+ <div id="weatherResults"></div>
+ 
+     <div id="historyBox">
+  <h3 id="historyTitle" >Geçmiş Aramalar</h3>
+    <button id="clearHistoryBtn" title="Geçmişi Temizle">Temizle</button>
+ 
+  <ul id="searchHistory"></ul>
+</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
